@@ -17,7 +17,7 @@ mvn spring-boot:run
 
 ### Notes
 * The JSON file containing the accounts can be found at: src/main/resources/accounts.json
-
+* **Please do not** manually change values stored in the accounts.json file. The JSON file is acting as a database, and values should only be updated through API calls/requests
 ### API Reference
 
 ---
