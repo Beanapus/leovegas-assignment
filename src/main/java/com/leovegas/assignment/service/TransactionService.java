@@ -32,6 +32,20 @@ public class TransactionService {
     return ResponseEntity.ok("Unable to debit account, insufficient funds!");
   }
 
+  public ResponseEntity<String> creditAccount(TransactionPayload payload) throws Exception {
+    Account account = readAccountFromFile(payload.getAccountName());
+    checkTransactionId(account, payload);
+
+    account.setBalance(account.getBalance() + payload.getAmount());
+    addTransactionToAccount(account, payload, true);
+
+    return ResponseEntity.ok("Account " + account.getName() + " successfully credited");
+  }
+
+  public ResponseEntity<Account> getAccount(String accountName) {
+    return ResponseEntity.ok(readAccountFromFile(accountName));
+  }
+
   private void addTransactionToAccount(
       Account account, TransactionPayload payload, boolean successful) throws Exception {
     List<Transaction> transactions = account.getTransactions();
