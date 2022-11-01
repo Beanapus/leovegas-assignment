@@ -11,10 +11,9 @@ public class Utility {
 
     private static ObjectMapper om;
 
-    //TODO remove
-    @PostConstruct
-    public void init(){
+    public static void init(){
         om = new ObjectMapper();
+        //TODO remove
         om.registerModule(new JSR310Module());
     }
 

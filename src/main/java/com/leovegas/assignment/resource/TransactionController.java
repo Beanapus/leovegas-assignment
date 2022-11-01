@@ -10,20 +10,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TransactionController {
 
-    private final TransactionService service;
+  private final TransactionService service;
 
-    public TransactionController(TransactionService service){
-        this.service = service;
-    }
+  public TransactionController(TransactionService service) {
+    this.service = service;
+  }
 
-    @PostMapping(path = "api/debit")
-    public ResponseEntity<String> debitAccount(@RequestBody TransactionPayload payload) throws Exception{
-        return service.debitAccount(payload);
-    }
+  @PostMapping(path = "api/debit")
+  public ResponseEntity<String> debitAccount(@RequestBody TransactionPayload payload)
+      throws Exception {
+    return service.debitAccount(payload);
+  }
 
-    @PostMapping(path = "api/credit")
-    public ResponseEntity<String> creditAccount(@RequestBody TransactionPayload payload){
-        return ResponseEntity.ok("");
-    }
-
+  @PostMapping(path = "api/credit")
+  public ResponseEntity<String> creditAccount(@RequestBody TransactionPayload payload) {
+    return ResponseEntity.ok("");
+  }
 }
