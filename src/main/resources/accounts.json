@@ -1,0 +1,36 @@
+[
+  {
+    "account-name": "will",
+    "account-balance": 100,
+    "account-transactions": [{
+      "transaction-id": 1234567890,
+      "transaction-date": "01-11-2022 09:30:00",
+      "transaction-type": "DEBIT",
+      "transaction-amount": 20,
+      "transaction-successful": true
+    },{
+      "transaction-id": 1234567891,
+      "transaction-date": "01-11-2022 12:30:00",
+      "transaction-type": "DEBIT",
+      "transaction-amount": 40,
+      "transaction-successful": true
+    }]
+  },
+  {
+    "account-name": "tim",
+    "account-balance": 400,
+    "account-transactions": [{
+      "transaction-id": 1234567892,
+      "transaction-date": "30-10-2022 21:15:00",
+      "transaction-type": "DEBIT",
+      "transaction-amount": 100,
+      "transaction-successful": true
+    },{
+      "transaction-id": 1234567893,
+      "transaction-date": "29-10-2022 20:00:00",
+      "transaction-type": "DEBIT",
+      "transaction-amount": 150,
+      "transaction-successful": true
+    }]
+  }
+]
