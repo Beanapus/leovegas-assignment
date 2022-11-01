@@ -71,6 +71,15 @@ mvn spring-boot:run
 
 ---
 
+#### Create Account
+
+* **URI** : localhost:8080/api/accounts/create
+* **Request Mapping**: PUT
+* **Request Parameters**:
+    * **accountName**: {String}
+
+---
+
 #### Get Account
 
 * **URI** : localhost:8080/api/accounts/get
