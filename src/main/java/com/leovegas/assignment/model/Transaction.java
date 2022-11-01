@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Builder
 public class Transaction {
-    private int id;
+    private String id;
     private LocalDateTime date;
     private TransactionType type;
     private int amount;

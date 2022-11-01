@@ -25,7 +25,7 @@ public class TransactionService {
     if (account.getBalance() >= payload.getAmount()) {
       account.setBalance(account.getBalance() - payload.getAmount());
       addTransactionToAccount(account, payload, true);
-      return ResponseEntity.ok("Account successfully debited");
+      return ResponseEntity.ok("Account [" + payload.getAccountName() + "] successfully debited");
     }
 
     addTransactionToAccount(account, payload, false);
@@ -39,7 +39,7 @@ public class TransactionService {
     account.setBalance(account.getBalance() + payload.getAmount());
     addTransactionToAccount(account, payload, true);
 
-    return ResponseEntity.ok("Account " + account.getName() + " successfully credited");
+    return ResponseEntity.ok("Account [" + account.getName() + "] successfully credited");
   }
 
   public ResponseEntity<Account> getAccount(String accountName) {
@@ -73,7 +73,7 @@ public class TransactionService {
 
   private void checkTransactionId(Account account, TransactionPayload payload) {
     for (Transaction transaction : account.getTransactions()) {
-      if (transaction.getId() == payload.getId()) {
+      if (transaction.getId().equals(payload.getId())) {
         throw new RuntimeException("Duplicate transaction ID in payload");
       }
     }
@@ -90,7 +90,7 @@ public class TransactionService {
   }
 
   @PostConstruct
-  private void loadAccounts() throws Exception {
+  void loadAccounts() throws Exception {
     Utility.init();
     accountList =
         Utility.objectMapper()
