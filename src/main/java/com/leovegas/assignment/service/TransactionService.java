@@ -46,6 +46,10 @@ public class TransactionService {
     return ResponseEntity.ok(readAccountFromFile(accountName));
   }
 
+  public ResponseEntity<AccountList> getAllAccounts() {
+    return ResponseEntity.ok(accountList);
+  }
+
   private void addTransactionToAccount(
       Account account, TransactionPayload payload, boolean successful) throws Exception {
     List<Transaction> transactions = account.getTransactions();

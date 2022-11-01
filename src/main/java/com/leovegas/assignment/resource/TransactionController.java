@@ -1,6 +1,7 @@
 package com.leovegas.assignment.resource;
 
 import com.leovegas.assignment.model.Account;
+import com.leovegas.assignment.model.AccountList;
 import com.leovegas.assignment.model.TransactionPayload;
 import com.leovegas.assignment.service.TransactionService;
 import org.springframework.http.ResponseEntity;
@@ -31,5 +32,10 @@ public class TransactionController {
   public ResponseEntity<Account> getAccount(
       @RequestParam(name = "accountName") String accountName) {
     return service.getAccount(accountName);
+  }
+
+  @GetMapping(path = "api/accounts/getAll")
+  public ResponseEntity<AccountList> getAllAccounts() {
+    return service.getAllAccounts();
   }
 }
