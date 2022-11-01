@@ -24,8 +24,8 @@ mvn spring-boot:run
 * Create account
 * Add credit to account
 * Debit account
-* View Account details and Balance
-* View all Accounts and Balances
+* Get Account details and Balance
+* Get all Accounts and Balances
 * Transaction history for all Accounts, including unsuccessful transactions
 * Unit tests to cover core features
 

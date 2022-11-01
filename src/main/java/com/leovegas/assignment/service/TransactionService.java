@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -48,6 +49,16 @@ public class TransactionService {
 
   public ResponseEntity<AccountList> getAllAccounts() {
     return ResponseEntity.ok(accountList);
+  }
+
+  public ResponseEntity<String> createAccount(String accountName) throws Exception {
+    Account account =
+        Account.builder().name(accountName).transactions(new ArrayList<>()).balance(0).build();
+
+    accountList.getAccounts().add(account);
+    saveUpdatedAccounts();
+
+    return ResponseEntity.ok("Account created for " + accountName);
   }
 
   private void addTransactionToAccount(

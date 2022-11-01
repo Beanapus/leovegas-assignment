@@ -38,4 +38,10 @@ public class TransactionController {
   public ResponseEntity<AccountList> getAllAccounts() {
     return service.getAllAccounts();
   }
+
+  @PutMapping(path = "api/accounts/create")
+  public ResponseEntity<String> createAccount(
+      @RequestParam(name = "accountName") String accountName) throws Exception {
+    return service.createAccount(accountName);
+  }
 }
