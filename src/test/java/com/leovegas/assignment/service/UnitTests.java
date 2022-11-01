@@ -25,7 +25,7 @@ public class UnitTests {
   @Test
   public void debitAccountTest() throws Exception {
     TransactionPayload payload =
-        createPayload(TransactionType.CREDIT, UUID.randomUUID().toString(), 10, "testAccount");
+        createPayload(TransactionType.DEBIT, UUID.randomUUID().toString(), 10, "testAccount");
     ResponseEntity<String> response = service.debitAccount(payload);
 
     assertEquals(ResponseEntity.ok("Account [testAccount] successfully debited"), response);

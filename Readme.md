@@ -31,7 +31,7 @@ mvn spring-boot:run
 
 #### Constraints
 
-* All transaction, both credit and debit, must have unique id's. If not, an exception is thrown
+* All transactions, both credit and debit, must have unique id's. If not, an exception is thrown
 * A debit transaction will be deemed unsuccessful if the debited amount is greater that the current balance
 
 ### Notes
