@@ -1,23 +1,46 @@
 # LeoVegas Coding Challenge Assignment
 
 ### Pre-requisites
+
 * Java 17
 * Maven
+
 ---
 
 ### Compile / Build
+
 mvn clean install
 
 ---
+
 ### Run
+
 mvn spring-boot:run
 
 ---
 
+### Features
+
+* Create account
+* Add credit to account
+* Debit account
+* View Account details and Balance
+* View all Accounts and Balances
+* Transaction history for all Accounts, including unsuccessful transactions
+* Unit tests to cover core features
+
+#### Constraints
+
+* All transaction, both credit and debit, must have unique id's. If not, an exception is thrown
+* A debit transaction will be deemed unsuccessful if the debited amount is greater that the current balance
 
 ### Notes
+
 * The JSON file containing the accounts can be found at: src/main/resources/accounts.json
-* **Please do not** manually change values stored in the accounts.json file. The JSON file is acting as a database, and values should only be updated through API calls/requests
+* **Please do not** manually change values stored in the accounts.json file. The JSON file is acting as a database, and
+  values should only be updated through API calls/requests
+* The application will run on port 8080
+
 ### API Reference
 
 ---

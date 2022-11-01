@@ -1,1 +1,62 @@
-{"accounts":[{"account-name":"will","account-balance":400,"account-transactions":[]},{"account-name":"tim","account-balance":400,"account-transactions":[{"id":"1234567892","date":[2022,10,29,20,30],"type":"DEBIT","amount":100,"successful":true},{"id":"1234567893","date":[2022,10,29,22,45],"type":"DEBIT","amount":150,"successful":true}]},{"account-name":"testAccount","account-balance":1000,"account-transactions":[{"id":"1234","date":[2022,11,1,22,39,35,124707000],"type":"DEBIT","amount":10,"successful":true},{"id":"6236ec5e-afe5-4b62-b483-ae2e07c640ef","date":[2022,11,1,22,45,34,750747000],"type":"CREDIT","amount":10,"successful":true},{"id":"18e01c75-08ec-4461-96e3-412ee4683ce7","date":[2022,11,1,22,45,34,800504000],"type":"CREDIT","amount":10,"successful":true},{"id":"ef1aab6d-92d7-4671-8811-4a97b3c6299f","date":[2022,11,1,22,45,34,810717000],"type":"DEBIT","amount":100000,"successful":false}]}]}
+{
+  "accounts": [
+    {
+      "account-name": "will",
+      "account-balance": 400,
+      "account-transactions": []
+    },
+    {
+      "account-name": "tim",
+      "account-balance": 400,
+      "account-transactions": [
+        {
+          "id": "1234567892",
+          "date": [
+            2022,
+            10,
+            29,
+            20,
+            30
+          ],
+          "type": "DEBIT",
+          "amount": 100,
+          "successful": true
+        },
+        {
+          "id": "1234567893",
+          "date": [
+            2022,
+            10,
+            29,
+            22,
+            45
+          ],
+          "type": "DEBIT",
+          "amount": 150,
+          "successful": true
+        }
+      ]
+    },
+    {
+      "account-name": "testAccount",
+      "account-balance": 1000,
+      "account-transactions": [
+        {
+          "id": "1234",
+          "date": [
+            2022,
+            11,
+            1,
+            22,
+            39,
+            35,
+            124707000
+          ],
+          "type": "DEBIT",
+          "amount": 10,
+          "successful": true
+        }
+      ]
+    }
+  ]
+}
