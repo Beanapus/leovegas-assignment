@@ -35,10 +35,9 @@ mvn spring-boot:run
 * A debit transaction will be deemed unsuccessful if the debited amount is greater that the current balance
 
 ### Notes
-
+* Due to the scope of the assignment, I have decided to use a simple JSON file to act as the database for the application.
 * The JSON file containing the accounts can be found at: src/main/resources/accounts.json
-* **Please do not** manually change values stored in the accounts.json file. The JSON file is acting as a database, and
-  values should only be updated through API calls/requests
+* **Please do not** manually change values stored in the accounts.json file. Values should only be updated through API calls/requests
 * The application will run on port 8080
 
 ### API Reference
